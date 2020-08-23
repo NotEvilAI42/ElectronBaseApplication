@@ -1,0 +1,18 @@
+# Assuming path is ~/Github/Prodjects/$APPNAME
+
+APPNAME='ElectronBaseApplication'
+PLATFORM='osx'
+PLATFORMNAME='mas'
+PATHFORBULDFILES='./obj/desktop/osx'
+
+cd src/$APPNAME/
+dotnet electronize build /target $PLATFORM
+
+electron-packager $PATHFORBULDFILES $APPNAME --platform=$PLATFORMNAME --arch=x64
+
+cd ../../
+rm ./exe/*
+cp ./src/$APPNAME/$APPNAME-mas-x64/$APPNAME.app ./exe/$APPNAME
+
+
+

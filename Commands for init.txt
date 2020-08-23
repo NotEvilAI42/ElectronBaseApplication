@@ -1,0 +1,41 @@
+APPNAME='ElectronBaseApplication'
+
+
+# Part 1 - making files
+cd ~/Prodjects/Github/$APPNAME
+mkdir src
+mkdir exe
+cd src/
+dotnet new mvc -o $APPNAME
+
+# Part 2 - Installing packages
+Sudo npm install electron-packager -g
+dotnet tool install ElectronNET.CLI -g
+cd $APPNAME
+dotnet add package ElectronNET.API
+
+# Part 3 - Manual edit
+# Add to .csproj 
+#		<ItemGroup>
+#	  		<DotNetCliToolReference Include="ElectronNET.CLI" Version="0.0.9" />
+#	 	</ItemGroup>
+#
+# Rewrite CreateHostBuilder function in Program.cs.
+#   using ElectronNET.API; 
+# 	public static IHostBuilder CreateHostBuilder(string[] args) =>
+#		Host.CreateDefaultBuilder(args)
+#			.ConfigureWebHostDefaults(webBuilder =>
+#			{
+#				webBuilder.UseElectron(args);
+#				webBuilder.UseStartup<Startup>();
+#			});
+#
+# Add boostrap to Startup.cs (at the end of file)
+#	using ElectronNET.API;
+# 	Task.Run(async () => await Electron.WindowManager.CreateWindowAsync());
+
+# Part 3
+# Still in src/$APPNAME
+dotnet electronize init
+# Application can be run with "dotnet electronize start"
+

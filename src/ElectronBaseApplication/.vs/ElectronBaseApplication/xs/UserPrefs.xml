@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{ABAB9778-B605-4083-A70F-30D54786188B}|ElectronBaseApplication">
+  <MonoDevelop.Ide.ItemProperties.ElectronBaseApplication PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ElectronBaseApplication.csproj">
+    <Files>
+      <File FileName="ElectronBaseApplication.csproj" Line="13" Column="3" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ElectronBaseApplication" expanded="True">
+            <Node name="ElectronBaseApplication" expanded="True" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
